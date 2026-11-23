@@ -1,0 +1,50 @@
+name: "Problème / Problem"
+description: "Quelque chose ne marche pas comme prévu. / Something does not work as expected."
+title: "[Problème] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de prendre le temps de signaler ce problème. Tout ce que tu écris ici est public : n'ajoute pas de renseignements personnels.
+        Thanks for reporting this problem. Everything you write here is public: do not include personal information.
+  - type: textarea
+    id: quoi
+    attributes:
+      label: "Qu'est-ce qui ne va pas ? / What is wrong?"
+      description: "Décris ce que tu as vu, et ce que tu attendais. / Describe what you saw, and what you expected."
+    validations:
+      required: true
+  - type: textarea
+    id: etapes
+    attributes:
+      label: "Comment le reproduire ? / How to reproduce it?"
+      description: "Les étapes, dans l'ordre (rubrique, méthode, recette…). / The steps, in order (section, method, recipe…)."
+      placeholder: |
+        1. Mode complet, rubrique 2, méthode Poolish
+        2. ...
+  - type: dropdown
+    id: version
+    attributes:
+      label: "Où utilises-tu l'appli ? / Where do you use the app?"
+      options:
+        - "Site web / Website"
+        - "Appli installée sur le téléphone / App installed on a phone"
+        - "Fichier Atelier Pizza.html / HTML file"
+    validations:
+      required: true
+  - type: input
+    id: appareil
+    attributes:
+      label: "Appareil et navigateur / Device and browser"
+      placeholder: "Ex. iPhone 13, Safari ; PC Windows, Chrome"
+  - type: input
+    id: numero
+    attributes:
+      label: "Version (en bas de l'appli) / Version (at the bottom of the app)"
+      placeholder: "Pizza_MZ014"
+  - type: textarea
+    id: capture
+    attributes:
+      label: "Capture d'écran (facultatif) / Screenshot (optional)"
+      description: "Glisse une image ici. / Drag an image here."
